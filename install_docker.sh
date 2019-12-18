@@ -13,6 +13,6 @@ sudo curl -L https://github.com/docker/compose/releases/download/1.25.0/docker-c
 sudo chmod +x /usr/local/bin/docker-compose
 
 # the usename needs to be chaged
-while IFS= red -r line; do
+while IFS= read -r line; do
   sudo usermod -aG docker $line
   done < <( ls -l /users | grep 4096 | cut -d' ' -f3 )
